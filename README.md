@@ -1,6 +1,6 @@
-# 
+# Software Architecture
 
-
+The styles, principles, and trade-offs behind how real systems are structured, from a single monolith to distributed microservices.
 
 Part of the [Yaaddi](https://github.com/yaaddi-courses) course catalog — a
 spaced-repetition flashcard course, ready to build and validate with the
