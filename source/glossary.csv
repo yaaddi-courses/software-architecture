@@ -8,7 +8,7 @@ Modular monolith,"A single deployable application, like a plain monolith, but wi
 Hexagonal architecture,"Also called ports and adapters -- a style that isolates a system's core logic from the outside world, letting it talk out only through defined ports, so pieces like the database can be swapped without touching the core.",,61
 Clean Architecture,"A style of concentric layers with business rules at the very center, where every dependency points inward toward that center rather than outward toward infrastructure.",,66
 Separation of concerns,"A design principle that keeps each distinct responsibility in its own independent part of a system, instead of tangling unrelated responsibilities together in the same place.",,76
-Coupling,"How tangled two parts of a system are with each other -- high coupling means a change in one part tends to force changes in the other, which good design tries to keep low.",,81
+Coupling,"How tangled two parts of a system are with each other -- high coupling means a change in one part tends to force changes in the other, which good design tries to keep low.",,217
 Cohesion,"How focused a single part of a system stays on one clear job -- high cohesion is what good design aims for, alongside low coupling.",,81
 SOLID,"A set of five widely referenced guidelines for object-oriented design -- Single responsibility, Open/closed, Liskov substitution, Interface segregation, and Dependency inversion -- aimed at making code easier to extend and maintain over time.",,86
 Domain-driven design,"Often shortened to DDD -- an approach that models software around the real business domain, keeping the code's vocabulary close to the language domain experts actually use.",,91
@@ -17,7 +17,7 @@ CQRS,"Short for Command Query Responsibility Segregation -- splitting the model 
 Event sourcing,"A design approach that stores every change to data as an event, instead of just overwriting the current state, so the full history can always be replayed.",,106
 Synchronous communication,"A way of calling another service where the caller waits for an immediate reply before moving on, unlike asynchronous communication which doesn't wait.",,111
 Asynchronous communication,"A way of calling another service where the caller fires something off and moves on immediately, without waiting for a reply.",,112
-REST,"An API design style that organizes endpoints around resources, uses HTTP verbs like GET and POST for actions on them, and returns a status code with every response.",https://en.wikipedia.org/wiki/REST,116
+REST,"An API design style that organizes endpoints around resources, uses HTTP verbs like GET and POST for actions on them, and returns a status code with every response.",https://en.wikipedia.org/wiki/REST,39
 Message queue,"A durable middleman that sits between a sender and a receiver, holding messages so the sender doesn't need the receiver to be online right now.",,121
 API gateway,"A single front door that routes incoming requests to many backend services, and often protects those services too (e.g. authentication, rate limiting).",,126
 Service discovery,"A mechanism that automatically finds another service's current network address, without a manual lookup -- needed because addresses change as service instances start and stop.",,131
