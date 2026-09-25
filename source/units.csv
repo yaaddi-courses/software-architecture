@@ -39,3 +39,4 @@ id,title,description,min_level,section,image,section_image
 38,Security in Architecture,"Designing access, boundaries, and trust into a system from the start, not bolted on later.",1,Cross-Cutting Concerns,unit38.png,
 39,Documenting Architecture (the C4 Model),"Four zoom levels — context, container, component, code — for diagramming a system.",1,Cross-Cutting Concerns,unit39.png,
 40,Making Architecture Trade-offs,Every architectural choice gains something and gives something up; naming that trade honestly.,1,Cross-Cutting Concerns,unit40.png,
+41,Recap: Key Terms,Quick matching practice that revisits the key terms from earlier decks.,1,Review,unit41.png,
