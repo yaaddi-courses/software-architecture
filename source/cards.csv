@@ -1,10 +1,10 @@
 id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,explanation
-1,1,true_false,preview,2,Architecture decisions are costly to change later.,,true,,,
+1,1,true_false,preview,2,Architecture decisions are costly to change later.,,true,,,"True. Structural decisions are built into everything that follows, so changing them later means reworking a lot."
 2,1,multiple_choice,main,,What makes a decision architectural?,Costly change|Cheap change|Never changes,0,,,Architecture is the high-level structure of a system — decisions are architectural when they're costly to change later.
-3,1,true_false,exercise,2,Architecture focuses on the high-level structure.,,true,,,
-4,1,select_blank,exercise,2,Architecture decisions are ___ to change later.,costly|free|instant,0,,,
-5,1,multiple_choice,exercise,2,What is not typically an architecture decision?,Variable name|Database choice|Service boundary,0,,,
-6,2,true_false,preview,7,Code is the most zoomed-in level.,,true,,,
+3,1,true_false,exercise,2,Architecture focuses on the high-level structure.,,true,,,"True. Architecture is about the high-level structure, such as the major parts and how they connect."
+4,1,select_blank,exercise,2,Architecture decisions are ___ to change later.,costly|free|instant,0,,,Architecture decisions are costly to change later because so much code depends on them.
+5,1,multiple_choice,exercise,2,What is not typically an architecture decision?,Variable name|Database choice|Service boundary,0,,,"A variable name is a small local choice, easy to change, unlike structural decisions such as how parts communicate."
+6,2,true_false,preview,7,Code is the most zoomed-in level.,,true,,,"True. Code is the most zoomed-in level of architecture, the detail inside a single component."
 7,2,multiple_choice,main,,Which is the broadest zoom level?,Architecture|Code|A variable,0,,,"Design is the middle zoom level, and code is the most zoomed-in — the actual implementation."
 8,2,true_false,exercise,7,Code is the most zoomed-in of the three levels.,,true,,,"Code is the most zoomed-in because it refers to the specific lines of code written in a language, which is much more detailed than high-level design concepts."
 9,2,select_blank,exercise,7,Design sits at the ___ zoom level.,middle|broadest|smallest,0,,,"Design usually sits at the middle zoom level because it provides sufficient structure and detail to implement, but remains higher-level than actual code."
@@ -24,12 +24,12 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 23,5,true_false,exercise,22,Different stakeholders can have different concerns at once.,,true,,,"Yes, this is the reality of complex projects; you often have to balance conflicting demands from multiple groups simultaneously."
 24,5,select_blank,exercise,22,Architecture must satisfy multiple ___ at once.,stakeholders|fonts|logos,0,,,"An architecture needs to balance the requirements and expectations of all involved parties, which are defined by the stakeholders. Fonts or logos are design elements, not functional constraints that an architecture must satisfy."
 25,5,multiple_choice,exercise,22,Give an example architecture stakeholder.,An operator|A font|A logo,0,,,"An operator is a person or group who will use and maintain the system, making them a critical stakeholder whose needs must be considered in the design. Fonts and logos are merely visual assets, not people or groups with vested interests in the architecture's success."
-26,6,true_false,preview,27,A monolith deploys as one single unit.,,true,,,
+26,6,true_false,preview,27,A monolith deploys as one single unit.,,true,,,True. A monolith is built and deployed as a single unit.
 27,6,multiple_choice,main,,What is a monolith deployed as?,One unit|Many units|No unit,0,,,"Monoliths are simple to start with, but get harder to change as they grow."
-28,6,true_false,exercise,27,A monolith is simple to start with.,,true,,,
-29,6,select_blank,exercise,27,A monolith ___ harder to change over time.,grows|shrinks|deploys,0,,,
-30,6,multiple_choice,exercise,27,What is one downside of a large monolith?,Harder changes|Simpler deploys|Fewer services,0,,,
-31,7,true_false,preview,32,Each layer only talks to its neighbor.,,true,,,
+28,6,true_false,exercise,27,A monolith is simple to start with.,,true,,,"True. A monolith is simple to start with: one codebase, one deployment and no network calls between parts."
+29,6,select_blank,exercise,27,A monolith ___ harder to change over time.,grows|shrinks|deploys,0,,,A monolith grows harder to change over time as more code ends up tangled together in one place.
+30,6,multiple_choice,exercise,27,What is one downside of a large monolith?,Harder changes|Simpler deploys|Fewer services,0,,,"One downside of a large monolith is that changes get harder, since one edit can affect many unrelated parts."
+31,7,true_false,preview,32,Each layer only talks to its neighbor.,,true,,,"True. In a layered design, each layer talks only to the layer next to it, which keeps dependencies orderly."
 32,7,multiple_choice,main,,How are layers typically organized?,Horizontally|In a circle|Randomly,0,,,"Layers like presentation, business logic, and data each only talk to their neighboring layer."
 33,7,true_false,exercise,32,A layer talks to its neighbor layer.,,true,,,"Yes, that's how layered architectures work; each layer is meant to pass information and functionality to the next one."
 34,7,select_blank,exercise,32,Data access is typically its own ___.,layer|button|font,0,,,"Data access should be encapsulated in its own dedicated layer (the DAL), which keeps your core business logic clean and unaware of database specifics."
@@ -48,7 +48,7 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 47,10,multiple_choice,main,,What does SOA build systems from?,Reusable services|Random files|Giant class,0,,,"SOA is an earlier style than microservices, built from well-defined services often connected through a shared enterprise bus."
 48,10,true_false,exercise,47,SOA is an earlier style than modern microservices.,,true,,,"Yes, while microservices are a modern evolution, SOA established the foundational concept of building large systems from discrete, manageable service units first."
 49,10,select_blank,exercise,47,SOA services are meant to be ___-defined.,well|poorly|never,0,,,SOA mandates that services must be highly encapsulated and well-defined so they can interact reliably with other parts of the system.
-50,10,multiple_choice,exercise,47,What often connects services in classic SOA?,Enterprise bus|Font file|A logo,0,,,
+50,10,multiple_choice,exercise,47,What often connects services in classic SOA?,Enterprise bus|Font file|A logo,0,,,"In classic SOA, services are typically connected through an enterprise service bus."
 51,11,true_false,preview,52,Serverless functions are triggered by events.,,true,,,"Serverless functions are designed to react to specific triggers, such as a file upload or database change, rather than running continuously in the background."
 52,11,multiple_choice,main,,What do you not manage in serverless?,Servers|Your code|Your logic,0,,,Serverless functions are short-lived and triggered by events — the platform runs them for you.
 53,11,true_false,exercise,52,Serverless functions are typically short-lived.,,true,,,"Yes, serverless functions only run when triggered and shut down immediately afterward, making them inherently temporary processes."
@@ -106,12 +106,12 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 105,21,multiple_choice,exercise,102,What does CQRS separate?,"Reads, writes|Event records|Time measurements",0,,,"It specifically separates reads (queries) from writes (commands), allowing you to scale and optimize those two functions independently."
 106,22,true_false,preview,107,Event sourcing stores every change as an event.,,true,,,"That's correct; event sourcing treats every state change as an immutable event, creating a perfect, chronological audit log of the system's history."
 107,22,multiple_choice,main,,What does event sourcing store?,Every change|Current state|Nothing,0,,,"Storing every change as an event, instead of just the current state, means you can always replay the full history."
-108,22,true_false,exercise,107,Event sourcing lets you replay history.,,true,,,
-109,22,select_blank,exercise,107,Each change is stored as an ___.,event|image|font,0,,,
-110,22,multiple_choice,exercise,107,What does event sourcing let you always see?,Full history|Only today|Nothing,0,,,
-111,23,true_false,preview,112,Synchronous communication waits for an immediate reply.,,true,,,
+108,22,true_false,exercise,107,Event sourcing lets you replay history.,,true,,,"True. Event sourcing stores every change as an event, so you can replay history to rebuild past states."
+109,22,select_blank,exercise,107,Each change is stored as an ___.,event|image|font,0,,,"In event sourcing, each change is stored as an event, and the current state comes from replaying them."
+110,22,multiple_choice,exercise,107,What does event sourcing let you always see?,Full history|Only today|Nothing,0,,,"Event sourcing lets you always see the full history of what happened, not just the latest state."
+111,23,true_false,preview,112,Synchronous communication waits for an immediate reply.,,true,,,True. Synchronous communication means the caller waits for an immediate reply before continuing.
 112,23,multiple_choice,main,,What does synchronous communication wait for?,Immediate reply|Nothing|Random delay,0,,,"Asynchronous communication fires something off and moves on without waiting, unlike synchronous communication."
-113,23,true_false,exercise,112,Asynchronous communication moves on without waiting.,,true,,,
+113,23,true_false,exercise,112,Asynchronous communication moves on without waiting.,,true,,,True. With asynchronous communication the sender moves on without waiting for the reply.
 114,23,select_blank,exercise,112,___ communication needs an immediate reply.,Synchronous|Asynchronous|Neither,0,,,Synchronous communication requires real-time interaction where both parties must be available to reply immediately; this is the definition of synchronous exchange.
 115,23,multiple_choice,exercise,112,What does async communication avoid?,Waiting|Sending data|Logic,0,,,"Asynchronous communication's primary benefit is that it removes the pressure of needing an immediate response, allowing people to work on their own schedules and time zones."
 116,24,true_false,preview,117,REST uses HTTP verbs like GET and POST.,,true,,,"Yes, REST architecture is built upon existing web standards, using HTTP verbs (like GET or POST) to define what action should be taken on a resource."
@@ -124,14 +124,14 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 123,25,true_false,exercise,122,A queue avoids needing the receiver online.,,true,,,"The queue acts as a buffer; it accepts and holds messages even when the receiving service is down, ensuring no data loss due to temporary downtime."
 124,25,select_blank,exercise,122,A queue acts as a durable ___.,middleman|font|logo,0,,,"It functions as a durable middleman because it reliably stores messages between two services, guaranteeing delivery regardless of their immediate availability."
 125,25,multiple_choice,exercise,122,What does a queue decouple?,"Sender, receiver|Two fonts|Two colors",0,,,A queue decouples the sender and receiver by allowing them to operate independently; they don't need to communicate directly or worry about each other's real-time status.
-126,26,true_false,preview,127,An API gateway is one front door.,,true,,,
+126,26,true_false,preview,127,An API gateway is one front door.,,true,,,True. An API gateway is a single front door that clients use to reach many backend services.
 127,26,multiple_choice,main,,What does an API gateway act as?,Front door|A database|A font,0,,,"As a front door, a gateway routes requests to many backend services, and often protects them too."
-128,26,true_false,exercise,127,An API gateway can protect backend services.,,true,,,
-129,26,select_blank,exercise,127,A gateway routes requests to many ___ services.,backend|frontend only|no,0,,,
-130,26,multiple_choice,exercise,127,How many services can a gateway route to?,Many|Exactly one|None,0,,,
-131,27,true_false,preview,132,Service discovery finds another service's address.,,true,,,
+128,26,true_false,exercise,127,An API gateway can protect backend services.,,true,,,True. A gateway can protect backend services by handling authentication and rate limiting before requests reach them.
+129,26,select_blank,exercise,127,A gateway routes requests to many ___ services.,backend|frontend only|no,0,,,A gateway receives each request and routes it to the right one of many backend services.
+130,26,multiple_choice,exercise,127,How many services can a gateway route to?,Many|Exactly one|None,0,,,"A gateway can route to many services, which is why clients only need to know its one address."
+131,27,true_false,preview,132,Service discovery finds another service's address.,,true,,,True. Service discovery lets one service look up another service's current network address.
 132,27,multiple_choice,main,,What does service discovery find?,Network address|A font|A logo,0,,,"Discovery happens automatically, without manual lookup, even as instances start and stop."
-133,27,true_false,exercise,132,Service discovery works even as instances change.,,true,,,
+133,27,true_false,exercise,132,Service discovery works even as instances change.,,true,,,"True. Service discovery keeps working as instances start, stop or move, because addresses are looked up, not hardcoded."
 134,27,select_blank,exercise,132,"Discovery happens ___, without manual lookup.",automatically|never|manually,0,,,"Service discovery mechanisms handle finding services on their own, meaning you don't have to look them up by hand or wait for manual updates."
 135,27,multiple_choice,exercise,132,Why is discovery needed in dynamic systems?,Addresses change|Addresses fixed|No services,0,,,"In dynamic environments where service locations or instances frequently change, discovery ensures clients can always find the current address without hardcoding it."
 136,28,true_false,preview,137,Database per service keeps each service's data private.,,true,,,"Because services own their dedicated database, they are isolated from others, which inherently improves data privacy and reduces the risk of cross-service contamination."
@@ -146,12 +146,12 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 145,29,multiple_choice,exercise,142,Which model reads the latest write immediately?,Strong|Eventual|Neither,0,,,"Only the Strong consistency model guarantees that a read operation will always return the most recent committed write immediately, unlike eventual consistency which introduces a delay window."
 146,30,true_false,preview,147,A cache stores a copy of data for speed.,,true,,,That's exactly right; caches store temporary copies of frequently accessed data to avoid hitting the slower primary database every time. This significantly reduces latency and improves performance.
 147,30,multiple_choice,main,,What does a cache trade for speed?,Staleness risk|Nothing|Storage cost,0,,,A cache stores a copy of data somewhere faster to reach than the original source — trading a small staleness risk for that speed.
-148,30,true_false,exercise,147,A cache should be faster than the source.,,true,,,
-149,30,select_blank,exercise,147,A cache stores a ___ of the original data.,copy|font|logo,0,,,
-150,30,multiple_choice,exercise,147,What is a risk of caching?,Stale data|Faster reads|Lower cost,0,,,
-151,31,true_false,preview,152,The CAP theorem applies during a network split.,,true,,,
+148,30,true_false,exercise,147,A cache should be faster than the source.,,true,,,True. A cache only helps if it is faster to read than the original source.
+149,30,select_blank,exercise,147,A cache stores a ___ of the original data.,copy|font|logo,0,,,"A cache stores a copy of the original data in a faster place, so repeated reads are quick."
+150,30,multiple_choice,exercise,147,What is a risk of caching?,Stale data|Faster reads|Lower cost,0,,,A risk of caching is stale data: the copy may no longer match the original after it changes.
+151,31,true_false,preview,152,The CAP theorem applies during a network split.,,true,,,True. The CAP theorem describes the trade-off a distributed system faces when a network split happens.
 152,31,multiple_choice,main,,When does the CAP tradeoff apply?,A split|Always|Only offline,0,,,"During a network split, a distributed system can only guarantee two of consistency, availability, and partition tolerance at once."
-153,31,true_false,exercise,152,CAP allows only two of three at once.,,true,,,
+153,31,true_false,exercise,152,CAP allows only two of three at once.,,true,,,"True. During a network partition you can guarantee only two of consistency, availability and partition tolerance."
 154,31,select_blank,exercise,152,CAP applies during a network ___.,split|upgrade|login,0,,,"CAP refers to the trade-offs that occur when your distributed system experiences a network partition (split). If the network splits, you must choose between consistency and availability."
 155,31,multiple_choice,exercise,152,Name one of the three CAP properties.,Consistency|Font size|Logo color,0,,,"The three properties are Consistency, Availability, and Partition Tolerance. Consistency ensures all nodes see the same data at the same time."
 156,32,true_false,preview,157,Horizontal scaling adds more machines to handle load.,,true,,,That's correct; horizontal scaling means adding more machines (scaling out) to spread the load across a larger cluster of hardware.
@@ -202,7 +202,7 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 201,2,order,exercise,7,"Put these zoom levels in order, broadest first.",Architecture|Design|Code,,,,"Architecture is the broadest view, design is the mid-level structure of a module, and code is the most zoomed-in — the actual lines."
 202,7,order,exercise,32,Put a request's path through the layers in order.,Presentation|Business logic|Data,,,,"A request enters through the presentation layer, is handled by business logic, and finally reaches the data layer — each layer only talks to its neighbor."
 203,34,order,exercise,167,Put the circuit breaker's states in order.,Closed|Open|Half-open,,,,"Closed lets calls through normally. Repeated failures trip it to open, which blocks calls to the failing service. After a cooldown it goes half-open, letting one trial call through to test if the service has recovered."
-204,35,order,exercise,172,Put these retry delays in order.,1 second|2 seconds|4 seconds|8 seconds,,,,Backoff grows the delay between retries — often by doubling it each time — so retries space out instead of hammering a struggling service.
+204,35,order,exercise,172,"Put these retry delays in order, shortest first.",1 second|2 seconds|4 seconds|8 seconds,,,,Backoff grows the delay between retries — often by doubling it each time — so retries space out instead of hammering a struggling service.
 205,39,order,exercise,192,"Put the C4 model's levels in order, broadest first.",Context|Container|Component|Code,,,,"Context is the broadest view of the system, container zooms into its deployable pieces, component zooms into a container's internal parts, and code is the most detailed level."
 206,15,match_pairs,exercise,72,Match each style to its defining trait.,Monolith↔Deployed as one unit|Microservices↔Independently deployable services|Serverless↔No servers for you to manage|Event-driven↔Services react to events|Hexagonal↔Core logic isolated behind ports,,,,A quick review of the styles covered so far: each one is defined by how it structures and deploys the system.
 207,31,match_pairs,exercise,152,Match each consistency term to its meaning.,"Strong consistency↔Every reader sees the latest write immediately|Eventual consistency↔Readers catch up to the latest write eventually|CAP theorem↔Only two of consistency, availability, partition tolerance at once",,,,"Strong consistency is immediate, eventual consistency catches up later, and the CAP theorem describes the tradeoff a distributed system faces during a network split."
