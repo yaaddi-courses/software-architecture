@@ -52,3 +52,15 @@ DAL,Data access layer: the part of a program that talks to the database.,https:/
 AWS,"Amazon Web Services: Amazon's cloud platform for renting servers, storage and other services.",https://en.wikipedia.org/wiki/Amazon_Web_Services,
 TDD,"Test-driven development: writing a failing test first, then the code that makes it pass.",https://en.wikipedia.org/wiki/Test-driven_development,
 BDD,Behaviour-driven development: describing software by examples of its behaviour in plain language.,https://en.wikipedia.org/wiki/Behavior-driven_development,
+RFC,Request for Comments: a written proposal that others review before a decision is made.,https://en.wikipedia.org/wiki/Request_for_Comments,210
+SLA,Service-level agreement: a promise about how reliable or fast a service will be.,https://en.wikipedia.org/wiki/Service-level_agreement,210
+CPUs,Central processing units: the processors that run a computer's programs.,https://en.wikipedia.org/wiki/Central_processing_unit,
+DB,Short for database: an organised store of data that programs can read and write.,https://en.wikipedia.org/wiki/Database,97
+DBs,Databases: organised stores of data that programs can read and write.,https://en.wikipedia.org/wiki/Database,102
+CRUD,"Create, read, update, delete: the four basic operations on stored data.","https://en.wikipedia.org/wiki/Create,_read,_update_and_delete",212
+ACID,"Atomicity, consistency, isolation, durability: the guarantees of reliable database transactions.",https://en.wikipedia.org/wiki/ACID,213
+UML,Unified Modeling Language: a standard set of diagrams for describing software designs.,https://en.wikipedia.org/wiki/Unified_Modeling_Language,214
+ERD,Entity-relationship diagram: a picture of the tables in a database and how they relate.,https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model,214
+Quality attributes,"Qualities a system must have beyond features, such as scalability, reliability and security.",https://en.wikipedia.org/wiki/Non-functional_requirement,11
+Bounded contexts,Domain-driven design boundaries inside which a term and its model have one clear meaning.,https://martinfowler.com/bliki/BoundedContext.html,96
+Database-per-service,A microservices pattern where each service owns its own database and others cannot touch it.,https://microservices.io/patterns/data/database-per-service.html,136

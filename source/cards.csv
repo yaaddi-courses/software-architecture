@@ -27,7 +27,7 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 26,6,true_false,preview,27,A monolith deploys as one single unit.,,true,,,
 27,6,multiple_choice,main,,What is a monolith deployed as?,One unit|Many units|No unit,0,,,"Monoliths are simple to start with, but get harder to change as they grow."
 28,6,true_false,exercise,27,A monolith is simple to start with.,,true,,,
-29,6,select_blank,exercise,27,A monolith gets harder to change over time.,grows|shrinks|deploys,0,,,
+29,6,select_blank,exercise,27,A monolith ___ harder to change over time.,grows|shrinks|deploys,0,,,
 30,6,multiple_choice,exercise,27,What is one downside of a large monolith?,Harder changes|Simpler deploys|Fewer services,0,,,
 31,7,true_false,preview,32,Each layer only talks to its neighbor.,,true,,,
 32,7,multiple_choice,main,,How are layers typically organized?,Horizontally|In a circle|Randomly,0,,,"Layers like presentation, business logic, and data each only talk to their neighboring layer."
