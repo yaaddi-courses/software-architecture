@@ -225,3 +225,46 @@ id,unit_id,type,role,related_main_id,prompt,options,correct_index,image,audio,ex
 224,41,match_pairs,exercise,219,Link every term to its idea.,Backoff↔Growing retry delay|Rate limiting↔Caps requests|Observability↔Understand running systems|Logs↔Discrete event records,,,,Each term is paired with its plain-language meaning.
 225,41,match_pairs,exercise,219,What does each term mean?,Logs↔Discrete event records|Metrics↔Numbers over time|Traces↔Follow one request|C4 model↔Four zoom levels,,,,Each term is paired with its plain-language meaning.
 226,41,true_false,exercise,219,Quality attribute means decision record.,,false,,,No: Quality attribute means non-functional goal.
+227,1,multiple_choice,exam,,An architectural decision is costly to:,Change|Explain|Document,0,,,Architecture is the high-level structure of a system.
+228,1,true_false,exam,,Architecture decisions are easy to change later.,,false,,,They are architectural because changing them is costly.
+229,2,multiple_choice,exam,,Which is the broadest zoom level?,Design|Code|Architecture,2,,,Code is the most zoomed-in level.
+230,3,multiple_choice,exam,,Scalability is an example of a:,Quality attribute|Design pattern|Test type,0,,,Reliability and maintainability are others.
+231,4,multiple_choice,exam,,An ADR records why a decision was:,Reversed|Made|Delayed,1,,,It helps future team members understand the reasoning.
+232,5,multiple_choice,exam,,Different stakeholders have different:,Salaries|Locations|Concerns,2,,,"Developers, operators and security teams care about different things."
+233,6,multiple_choice,exam,,A monolith is deployed as one:,Unit|Service|Cluster,0,,,It is simple to start but harder to change as it grows.
+234,7,multiple_choice,exam,,Layers each talk only to their:,Client|Neighbor|Database,1,,,"Presentation, business logic and data are typical layers."
+235,8,multiple_choice,exam,,Microservices can be deployed:,Only together|Once yearly|Independently,2,,,Each service ships on its own.
+236,9,multiple_choice,exam,,"In event-driven systems, services react to:",Events|Direct calls|Schedules,0,,,It loosens how tightly services depend on each other.
+237,10,multiple_choice,exam,,SOA builds systems from reusable:,Scripts|Services|Layers,1,,,It is an earlier style than microservices.
+238,11,multiple_choice,exam,,"In serverless, you do not manage:",Code|Events|Servers,2,,,The platform runs functions when events trigger them.
+239,12,multiple_choice,exam,,A modular monolith keeps strict module:,Boundaries|Deadlines|Budgets,0,,,It still deploys as one simple unit.
+240,13,multiple_choice,exam,,Hexagonal architecture isolates the:,User interface|Core logic|Database,1,,,The core talks to the outside only through defined ports.
+241,14,multiple_choice,exam,,In Clean Architecture dependencies point:,Outward|Randomly|Inward,2,,,Business rules sit at the center.
+242,15,multiple_choice,exam,,Each pipe-and-filter filter does:,One job|Every job|No job,0,,,Data flows through a chain of independent filters.
+243,16,multiple_choice,exam,,Separation of concerns gives each responsibility its own:,Budget|Part|Owner,1,,,Responsibilities stay in distinct parts.
+244,17,multiple_choice,exam,,Good design wants low coupling and high:,Latency|Capacity|Cohesion,2,,,A part should stay focused on one job.
+245,18,multiple_choice,exam,,SOLID has how many guidelines?,Five|Three|Seven,0,,,They guide object-oriented design.
+246,19,multiple_choice,exam,,Domain-driven design centers on the:,Framework|Business domain|Database,1,,,It models real business concepts and rules.
+247,20,multiple_choice,exam,,A bounded context defines a model's:,Speed|Size|Scope,2,,,The same word can mean different things in different contexts.
+248,21,multiple_choice,exam,,CQRS separates reads from:,Writes|Events|Users,0,,,Each side can be optimized separately.
+249,22,multiple_choice,exam,,Event sourcing stores every:,Query|Change|Backup,1,,,You can rebuild past states from the events.
+250,23,multiple_choice,exam,,Synchronous communication waits for a:,Queue|Retry|Reply,2,,,Asynchronous communication moves on without waiting.
+251,24,multiple_choice,exam,,REST organizes endpoints around:,Resources|Functions|Screens,0,,,It also uses HTTP verbs such as GET and POST.
+252,30,multiple_choice,exam,,A message queue sits between sender and:,Cache|Receiver|Database,1,,,It is a durable middleman.
+253,26,multiple_choice,exam,,An API gateway is one:,Back door|Side door|Front door,2,,,It routes requests to many backend services.
+254,27,multiple_choice,exam,,Service discovery finds a service's:,Address|Author|Version,0,,,It works even as instances start and stop.
+255,28,multiple_choice,exam,,A shared database causes tight:,Caching|Coupling|Latency,1,,,Database per service keeps data private.
+256,29,multiple_choice,exam,,Strong consistency shows readers the latest:,Backup|Index|Write,2,,,Eventual consistency may lag behind.
+257,29,true_false,exam,,Eventual consistency shows every reader the latest write immediately.,,false,,,That describes strong consistency.
+258,30,multiple_choice,exam,,A cache trades freshness for:,Security|Speed|Storage,1,,,The copy can become stale.
+259,31,multiple_choice,exam,,The CAP tradeoff applies during a network:,Upgrade|Backup|Split,2,,,A system can guarantee only two of the three properties.
+260,32,multiple_choice,exam,,Horizontal scaling adds more:,Machines|Memory|Features,0,,,Vertical scaling makes one machine bigger.
+261,33,multiple_choice,exam,,A load balancer spreads:,Code|Traffic|Data,1,,,No single server gets overwhelmed.
+262,34,multiple_choice,exam,,A circuit breaker stops calls to a:,New service|Cache|Failing service,2,,,It acts after repeated failures.
+263,35,multiple_choice,exam,,"With backoff, the delay between retries:",Grows|Shrinks|Vanishes,0,,,It avoids hammering a struggling service.
+264,36,multiple_choice,exam,,Rate limiting caps requests within a:,Database|Time window|Server pool,1,,,It protects the service from one client.
+265,37,multiple_choice,exam,,A trace follows one:,User|Server|Request,2,,,Logs record events and metrics track numbers over time.
+266,38,multiple_choice,exam,,Security is cheapest to design in:,Early|Late|After launch,0,,,Bolting it on later is far more costly.
+267,39,multiple_choice,exam,,The C4 model uses how many zoom levels?,Six|Four|Two,1,,,"Context, container, component and code."
+268,40,multiple_choice,exam,,Every architecture choice involves a:,Guarantee|Shortcut|Trade-off,2,,,It gains something and gives something up.
+269,40,true_false,exam,,Some architecture choices have no trade-offs.,,false,,,Every real choice gains something and gives something up.
