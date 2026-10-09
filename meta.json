@@ -4,7 +4,7 @@
   "description": "The styles, principles, and trade-offs behind how real systems are structured, from a single monolith to distributed microservices.",
   "image": "cover.png",
   "file": "software-architecture.zip",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tags": [
     "software-architecture",
     "system-design",
@@ -16,6 +16,11 @@
       "version": "1.0.0",
       "date": "2026-09-30",
       "notes": "Initial release â€” 40 decks, 217 cards, each pack with a preview card teaching the concept before its graded main card and practice cards."
+    },
+    {
+      "version": "1.0.1",
+      "date": "2026-10-09",
+      "notes": "Glossary: every term now points at one link, so the same word never sends you to two different pages."
     }
   ],
   "toc": [
