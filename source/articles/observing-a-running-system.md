@@ -6,9 +6,9 @@
 When a system runs on many machines and you cannot attach a debugger, how do you find out why it is slow, or why one user's request failed? The answer is to make the system report on itself while it runs. This property is called observability, and it is built from three kinds of signals. Each answers a different question, and together they make problems findable.
 
 ## Observability {#observability}
-Observability is the ability to understand what a running system is doing from the outside, by looking at the data it produces. A system is observable when you can ask a new question about its behavior, such as "why were requests slow for customers in Berlin at 3 p.m.?", and answer it without changing the code.
+A system is observable when you can understand what it is doing from the outside, by looking at the data it produces. You can ask a new question about its behavior, such as "why were requests slow for customers in Berlin at 3 p.m.?", and answer it without changing the code.
 
-It is different from monitoring in one way. Monitoring watches for problems that you expected, using dashboards and alerts. Observability helps you investigate problems that you did not expect. The two work together. The raw material is three signals: logs, metrics and traces.
+It differs from monitoring in one way. Monitoring watches for problems that you expected, using dashboards and alerts. Observability helps you investigate problems that you did not expect. The two work together. The raw material is three signals: logs, metrics and traces.
 
 ## Logs {#logs}
 Logs are records of individual events that happened in a system, each a separate entry such as "user 42 logged in at 10:03" or "payment failed: card declined". They answer the question "what happened?" in detail.
@@ -38,9 +38,9 @@ print(statistics.median(latencies))
 # 90.0
 ```
 
-How to read it:
+Let's read it:
 
-1. The average is 200.7 milliseconds, which looks like a slow service.
+1. The average is 200.7 milliseconds (the ten values add up to 2,007), which looks like a slow service.
 2. The median, the middle value, is 90, so a typical request is fast.
 3. One request took 1,200, which pulls the average up. The average hides the fact that 9 of 10 requests are fine, and that one is very bad.
 
@@ -52,7 +52,9 @@ Now use all three signals for that bad request:
 Together they point to a cause in about five minutes: a slow card provider. With only the metric, the team would know that something was wrong, but would have to guess where.
 
 ## A common mistake {#mistake}
-Collecting logs only and hoping to search them in a crisis. Without metrics you cannot see trends, and without traces you cannot follow a request across services. Another mistake is looking at averages. Use percentiles such as the 95th, which show how the slowest requests behave.
+A common slip is collecting logs only and hoping to search them in a crisis. Without metrics you cannot see trends, and without traces you cannot follow a request across services.
+
+A second slip is looking at averages. Use percentiles such as the 95th, which show how the slowest requests behave.
 
 ## Key points {#key-points}
 - Observability is being able to understand a running system from the data it produces.
