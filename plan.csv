@@ -1,0 +1,42 @@
+section,deck,pack,level,keywords,terms,kind,main_card_id
+Foundations,What Software Architecture Actually Is,What makes a decision architectural?,1,What makes a decision architectural?,,teach,2
+Foundations,Architecture vs Design vs Code,Which is the broadest zoom level?,1,Which is the broadest zoom level?,,teach,7
+Foundations,"Quality Attributes (the ""-ilities"")",Pick examples of quality attributes.,1,Quality attribute,Quality attribute,teach,12
+Foundations,Architectural Decision Records,What does an ADR record?,1,ADR,ADR,teach,17
+Foundations,Identifying Architecture Stakeholders,Pick likely architecture stakeholders.,1,Pick likely architecture stakeholders.,,teach,22
+Architectural Styles,Monolithic Architecture,What is a monolith deployed as?,1,Monolith,Monolith,teach,27
+Architectural Styles,Layered (N-Tier) Architecture,How are layers typically organized?,1,How are layers typically organized?,,teach,32
+Architectural Styles,Microservices Architecture,What can microservices deploy independently?,1,Microservices|REST,Microservices|REST,teach,37
+Architectural Styles,Event-Driven Architecture,What do services react to here?,1,Coupling,Coupling,teach,42
+Architectural Styles,Service-Oriented Architecture,What does SOA build systems from?,1,What does SOA build systems from?,,teach,47
+Architectural Styles,Serverless Architecture,What do you not manage in serverless?,1,Serverless,Serverless,teach,52
+Architectural Styles,Modular Monolith,What does a modular monolith keep from a monolith?,2,Modular monolith,Modular monolith,teach,57
+Architectural Styles,Hexagonal (Ports & Adapters) Architecture,What does hexagonal architecture isolate?,2,Hexagonal architecture,Hexagonal architecture,teach,62
+Architectural Styles,Clean Architecture,Which direction do dependencies point?,2,Clean Architecture,Clean Architecture,teach,67
+Architectural Styles,Pipe-and-Filter Architecture,What does each filter do?,2,What does each filter do?,,teach,72
+Design Principles,Separation of Concerns,What does separation of concerns keep apart?,2,Separation of concerns,Separation of concerns,teach,77
+Design Principles,Coupling and Cohesion,What should good design aim for?,2,Cohesion,Cohesion,teach,82
+Design Principles,SOLID Principles Overview,How many guidelines make up SOLID?,2,SOLID,SOLID,teach,87
+Design Principles,Domain-Driven Design Basics,What does DDD model software around?,2,Domain-driven design,Domain-driven design,teach,92
+Design Principles,Bounded Contexts,What does a bounded context define?,2,Bounded context,Bounded context,teach,97
+Design Principles,CQRS,What does CQRS split apart?,2,CQRS,CQRS,teach,102
+Design Principles,Event Sourcing,What does event sourcing store?,3,Event sourcing,Event sourcing,teach,107
+Communication and Integration,Synchronous vs Asynchronous Communication,What does synchronous communication wait for?,3,Synchronous communication|Asynchronous communication,Synchronous communication|Asynchronous communication,teach,112
+Communication and Integration,REST API Design Basics,What does REST organize endpoints around?,3,What does REST organize endpoints around?,,teach,117
+Communication and Integration,Message Queues and Brokers,What does a message queue sit between?,3,Message queue,Message queue,teach,122
+Communication and Integration,API Gateways,What does an API gateway act as?,3,API gateway,API gateway,teach,127
+Communication and Integration,Service Discovery,What does service discovery find?,3,Service discovery,Service discovery,teach,132
+Data Architecture,Database per Service vs Shared Database,What does a shared database cause?,3,Database per service,Database per service,teach,137
+Data Architecture,Consistency Models: Strong vs Eventual,What does strong consistency guarantee?,3,Strong consistency|Eventual consistency,Strong consistency|Eventual consistency,teach,142
+Data Architecture,Caching Strategies,What does a cache trade for speed?,3,Cache,Cache,teach,147
+Data Architecture,The CAP Theorem,When does the CAP tradeoff apply?,3,CAP theorem,CAP theorem,teach,152
+Scalability and Resilience,Horizontal vs Vertical Scaling,What does horizontal scaling add?,4,Horizontal scaling|Vertical scaling,Horizontal scaling|Vertical scaling,teach,157
+Scalability and Resilience,Load Balancing Basics,What does a load balancer spread?,4,Load balancer,Load balancer,teach,162
+Scalability and Resilience,The Circuit Breaker Pattern,What does a circuit breaker stop temporarily?,4,Circuit breaker,Circuit breaker,teach,167
+Scalability and Resilience,Retry and Backoff Strategies,What grows between retry attempts?,4,Backoff,Backoff,teach,172
+Scalability and Resilience,Rate Limiting,What does rate limiting cap?,4,Rate limiting,Rate limiting,teach,177
+Cross-Cutting Concerns,"Observability: Logs, Metrics, Traces",Pick the three observability signals.,4,Observability|Logs|Metrics|Traces,Observability|Logs|Metrics|Traces,teach,182
+Cross-Cutting Concerns,Security in Architecture,When should security be designed in?,4,When should security be designed in?,,teach,187
+Cross-Cutting Concerns,Documenting Architecture (the C4 Model),How many zoom levels does C4 use?,4,C4 model,C4 model,teach,192
+Cross-Cutting Concerns,Making Architecture Trade-offs,Every real architecture choice involves a ___.,4,Every real architecture choice involves a ___.,,teach,197
+Review,Recap: Key Terms,Recap pack 41,4,Quality attribute|ADR|Modular monolith|Hexagonal architecture|Clean Architecture|Domain-driven design|CQRS|Event sourcing|Synchronous communication|Asynchronous communication|Service discovery|Database per service|Cache|CAP theorem|Horizontal scaling|Vertical scaling|Load balancer|Circuit breaker|Backoff|Rate limiting|Observability|Logs|Metrics|Traces|C4 model,,review,219
